@@ -1,5 +1,6 @@
 document.getElementById('btn-donate-noakhali')
     .addEventListener('click', function () {
+        console.log('button clicked');
         const donateBalanceNoakhali = getInputfeildValue('donate-noakhali-input');
         const balanceNoakhali = getTextValue('balance-noakhali');
         const accountBalance = getTextValue('account-balance');
@@ -87,7 +88,7 @@ document.getElementById('btn-donate-quta')
                 const newAccountBalance = accountBalance - donateBalaceQuta;
                 document.getElementById('account-balance').innerText = newAccountBalance.toFixed(2);
                 alert(`Congrates You donate for Quta movement ${donateBalaceQuta}tk.`);
-    
+
                 const div = document.createElement('div');
                 div.className = "bg-white rounded-md p-3  mt-2";
                 div.innerHTML = `
@@ -101,7 +102,7 @@ document.getElementById('btn-donate-quta')
                 getId('history-container').appendChild(div);
             }
         }
-        
+
     })
 
 document.getElementById('history-btn')
@@ -127,3 +128,6 @@ document.getElementById('blog-btn')
     .addEventListener('click', function () {
         window.location.href = 'question.html';
     })
+
+
+
